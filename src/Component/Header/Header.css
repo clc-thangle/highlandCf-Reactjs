@@ -1,0 +1,277 @@
+body {
+    margin: 0;
+    font-family: 'Barlow', sans-serif;
+}
+
+.ncf-header {
+    margin: 0px;
+    padding: 0px;
+    background-color: #b22830;
+}
+
+.headerTool {
+    float: right;
+    display: inline-block;  
+    align-items: center;
+    margin-top: 30px;
+    margin-right: 150px;
+}
+
+.logo {
+    margin-left: 100px;
+    display: inline-block;
+    max-width: 100px;
+}
+
+.input {
+    display: inline;
+    padding-left: 10px;
+    padding-right: 30px;
+    width: 200px;
+    height: 30px; 
+    padding-top: 5px;
+
+}
+
+.fa-search {
+    position: absolute;
+    z-index: 1;
+    margin: 9px 0px 0px -25px;
+}
+
+.rowTool {
+    margin: 0px;
+    padding: 0px;   
+}
+
+.search {
+    float: left;
+    position: relative;
+    z-index: 9;
+}
+
+.language {
+    float: right;
+    padding: 3px;
+}
+
+.language ul {
+    margin: 0;
+    padding-left: 10px;
+}
+
+.language li{
+    display: inline;
+    list-style: none;
+}
+
+.menuTool li {
+    display: inline;
+    margin-top: 10px;
+
+}
+
+.menuTool ul {
+margin: -5px;
+font-weight: 600;
+font-size: 20px;
+}
+
+.menuTool a {
+    cursor: pointer;
+    color: #ffffff;
+    font-size: px;
+    padding: 10px 17px 10px 17px;
+    text-decoration: none;
+}
+
+.menuTool {
+    text-align: center;
+    padding: 15px;
+}
+
+.menuList:hover {
+    background-color: #53382C;
+    /* transition-delay: 0,3s; */
+}
+
+.wrapper {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+    display: inline;
+}
+
+.col3 {
+    float: right;
+    margin-right: 100px;
+}
+
+.menuHover {
+    display: none;
+    position: absolute;
+    background-color: #53382C;
+    z-index: 1;
+    width: 100%;
+    left: 0;
+    animation-delay: 0,5s;
+    margin-top: 10px;
+}
+
+.img {
+    margin-top: 40px;
+}
+
+.tintuc {
+    margin-left: 150px;
+}
+
+.scrollMenu {
+    display: inline-block;
+    width: 100%;
+}
+
+.grid li {
+    display: inline-block;
+    margin-left: -10px;
+}
+
+.hover-li {
+    float: left;
+    margin: 0;
+    width: 22%;
+}
+
+.hover-li-item {
+    color: #f1bc7a !important;
+}
+
+.hover-li a {
+    text-decoration: none;
+    padding: 0;
+}
+
+.hover-li ul li {
+    display: block !important;
+}
+
+.menuList {
+    padding: 15px;
+
+}
+.menuList:hover .menuHover {
+    display: flex;
+    transition-delay: 1s;
+}
+
+.hover-li ul {
+    padding: 0;
+    display: block;
+    text-align: center;
+}
+
+.bannerMenu {
+    background-image: url('https://www.highlandscoffee.com.vn/skins/default/images/bgmenu.jpg');
+    background-size: cover;
+    height: 250px;
+    width: 190px;
+    margin-bottom: 19px;
+}
+
+
+.slider {
+    position: absolute;
+}
+
+.hover-li {
+    width: 17%;
+}
+
+li.hover-li{
+    margin: 0;
+    text-align: center;
+    width: 16.5%;
+}
+.row {
+    display: block;
+    margin: 10px;
+  }
+  .row::before {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  .row::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+  
+  [class*="col-"] {
+    float: left;
+    padding: 0 2px;
+  }
+  
+  @media (min-width: 768px) and (max-width: 1023px)
+   {
+    .col-lg-1 { width: 8.33333333%; }
+    .col-lg-2 { width: 16.6666667%; }
+    .col-lg-3 { width: 25%; }
+    .col-lg-4 { width: 33.3333333%; }
+    .col-lg-5 { width: 41.6666667%; }
+    .col-lg-6 { width: 50%; }
+    .col-lg-7 { width: 58.3333333%; }
+    .col-lg-8 { width: 66.6666667%; }
+    .col-lg-9 { width: 75%; }
+    .col-lg-10 { width: 83.3333333%; }
+    .col-lg-11 { width: 91.6666667%; }
+    .col-lg-12 { width: 100%; }
+  }
+  
+  /* For desktop: */
+   @media (min-width: 1024px) {
+    .col-md-1{ width: 8.33333333%; }
+    .col-md-2{ width: 16.6666667%; }
+    .col-md-3{ width: 25%; }
+    .col-md-4{ width: 33.3333333%; }
+    .col-md-5{ width: 41.6666667%; }
+    .col-md-6{ width: 50%; }
+    .col-md-7{ width: 58.3333333%; }
+    .col-md-8{ width: 66.6666667%; }
+    .col-md-9{ width: 75%; }
+    .col-md-10{ width: 83.3333333%; }
+    .col-md-11{ width: 91.6666667%; }
+    .col-md-12{ width: 100%; }
+  }
+  
+  /* For tablets: */
+  @media (min-width: 600px) and (max-width: 767px) {
+    .col-sm-1{ width: 8.33333333%; }
+    .col-sm-2{ width: 16.6666667%; }
+    .col-sm-3{ width: 25%; }
+    .col-sm-4{ width: 33.3333333%; }
+    .col-sm-5{ width: 41.6666667%; }
+    .col-sm-6{ width: 50%; }
+    .col-sm-7{ width: 58.3333333%; }
+    .col-sm-8{ width: 66.6666667%; }
+    .col-sm-9{ width: 75%; }
+    .col-sm-10{ width: 83.3333333%; }
+    .col-sm-11{ width: 91.6666667%; }
+    .col-sm-12{ width: 100%; }
+  }
+  
+  /* For mobile phones */
+  @media (max-width: 599px) {
+    .col-1 { width: 8.33333333%; }
+    .col-2 { width: 16.6666667%; }
+    .col-3 { width: 25%; }
+    .col-4 { width: 33.3333333%; }
+    .col-5 { width: 41.6666667%; }
+    .col-6 { width: 50%; }
+    .col-7 { width: 58.3333333%; }
+    .col-8 { width: 66.6666667%; }
+    .col-9 { width: 75%; }
+    .col-10 { width: 83.3333333%; }
+    .col-11 { width: 91.6666667%; }
+    .col-12 { width: 100%; }
+  }

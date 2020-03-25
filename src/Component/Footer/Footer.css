@@ -1,0 +1,40 @@
+.footer-fot {
+    background: #53382c;
+    padding: 1px;
+}
+
+.socialFood-fot {
+    display: inline-block;
+    float: left;
+    margin-top: 20px;
+}
+
+.socialFood-fot li {
+    display: inline-block;
+    padding: 5px 10px;
+    background: white;
+    color: black;
+}
+
+.foot-fot {
+    margin-bottom: 23px;
+}
+
+.copyRight-fot {
+    display: inline-block;
+    margin: 24px 200px 0px 200px;
+    color: white;
+}
+
+.linkFooter-fot {
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.linkFooterEmail-fot {
+    display: inline-block;
+    float: right;
+    margin-top: 20px;
+    padding: 5px;
+}
+

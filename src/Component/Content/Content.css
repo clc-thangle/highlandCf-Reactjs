@@ -1,0 +1,172 @@
+.image1-tend a {
+  position: absolute;
+  float: right;
+  margin: 25% 0 0 62%;
+  height: 53px;
+  font-size: 18px;
+  border-style: solid;
+  width: 239px;
+  padding: 12px;
+  border-radius: 5px;
+  text-align: center;
+  border-color: rgb(243, 189, 122);
+  color: rgb(243, 189, 122);
+  text-decoration: none;
+  cursor: pointer;
+  border-width: 1px;
+}
+
+.image2-tend a {
+  position: absolute;
+  float: right;
+  margin: 25% 0 0 30%;
+  height: 53px;
+  font-size: 18px;
+  border-style: solid;
+  width: 239px;
+  padding: 12px;
+  border-radius: 5px;
+  text-align: center;
+  border-color: rgb(72, 98, 50);
+  color: rgb(72, 98, 50);
+  text-decoration: none;
+  cursor: pointer;
+  border-width: 1px;
+}
+
+.image3-tend a {
+  position: absolute;
+  float: right;
+  margin: 25% 0 0 62%;
+  height: 53px;
+  font-size: 18px;
+  border-style: solid;
+  width: 239px;
+  padding: 12px;
+  border-radius: 5px;
+  text-align: center;
+  border-color: rgb(177, 42, 45);
+  color: rgb(177, 42, 45);
+  text-decoration: none;
+  cursor: pointer;
+  border-width: 1px;
+}
+
+.khampha3-tend:hover {
+  color: black;
+  background-color: rgb(177, 42, 45);
+  animation-delay: 0.5s;
+  transition: all 0.3s linear;
+}
+
+.khampha2-tend:hover {
+  color: black;
+  background-color: rgb(72, 98, 50);
+  animation-delay: 0.5s;
+  transition: all 0.3s linear;
+}
+
+.khampha-tend:hover {
+  color: black;
+  background-color: rgb(243, 189, 122);
+  animation-delay: 0.5s;
+  transition: all 0.3s linear;
+}
+
+.col-b1-tend {
+  background-image: url(https://www.highlandscoffee.com.vn/vnt_upload/weblink/homepage-STORE_1.jpg);
+  width: 50%;
+  padding-bottom: 18.55% !important;
+  background-size: cover;
+}
+
+.col-b2-tend {
+  background-image: url(https://www.highlandscoffee.com.vn/vnt_upload/weblink/bg2.jpg);
+  width: 50%;
+  padding-bottom: 4% !important;
+  background-size: cover;
+}
+
+.main1-tend ul {
+  list-style: none;
+  float: right;
+  background-size: cover;
+  margin-top: 95px;
+  margin-bottom: 10px;
+}
+
+.main1-tend a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.main1-tend a:hover{
+  color: rgb(243, 189, 122);
+}
+
+.main1-tend li {
+  margin-right: 20px;
+}
+
+.quanmoi-tend {
+  margin-top: 15%;
+  display: inline-block;
+  margin-left: 75px;
+  color: white;
+}
+
+.newfeed1 {
+  /* margin-top: 35px; */
+}
+
+.newfeed1-tend li {
+  display: inline-block;
+}
+
+.newfeed2-tend li {
+  display: inline-block;
+  margin-left: 62px;
+}
+
+.mainBot-tend {
+  display: block;
+}
+
+.mainBotImg-tend {
+  width: 30%;
+  display: inline-block;
+}
+
+.newfeed3-tend {
+  text-align: center;
+  margin-top: 54px;
+}
+
+.content {
+  overflow: hidden;
+}
+
+.txtBot-tend {
+  width: 70%;
+  float: right;   
+}
+
+/* .txtBot2 {
+  text-align: left;
+  display: inline-block;
+  float: left;
+} */
+
+.fa-calender {
+  margin-right: 10px;
+}
+
+.txtCalendar-tend {
+  margin-top: 7px;
+} 
+
+.mainBotImg2-tend {
+ width: 24%;float: left;
+}

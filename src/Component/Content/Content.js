@@ -33,7 +33,7 @@ class Content extends Component {
           <div className="mainBot-tend">
             <div className="gridBot-tend">
               <div className="col-b1-tend">
-                <div className="main1-tend" style={{ marginTop: '-93px' }}>
+                <div className="main1-tend" style={{ marginTop: '-73px' }}>
                   <h1 className="quanmoi-tend">QUÁN MỚI</h1>
                   <ul>
                     <li><h1 style={{ color: 'white' }}>721 HUỲNH TẤN PHÁT</h1></li>

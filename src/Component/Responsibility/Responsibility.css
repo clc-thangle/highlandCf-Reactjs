@@ -1,0 +1,38 @@
+.row-res {
+    width: 80%;
+    margin-left: 11% !important;   
+}
+
+.new-title-res {
+    margin-left: 11%;
+    margin-top: 42px;
+    margin-bottom: 20px;
+}
+
+.new-content-res {
+    margin-bottom: 90px;
+    overflow: hidden;
+}
+
+.col-md-4 {
+    margin-bottom: 15px;
+}
+
+.tend-res a {
+    color: black;
+}
+
+.col-md-4 a {
+    cursor: pointer;
+}
+
+.tend-res a {
+    font-size: 15px;
+    text-decoration: none;
+}
+
+.tend-res h3 {
+    width: 96%;
+}
+
+

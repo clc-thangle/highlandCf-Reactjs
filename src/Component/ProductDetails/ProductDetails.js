@@ -30,7 +30,7 @@ class ProductDetails extends Component {
                 </div>
                 <div className="ctsp-giohang-productD ctsp-col3-productD">
                     <div className="ctsp-dathang-productD">
-                        <button>ĐẶT HÀNG</button>
+                        <button>THÊM VÀO GIỎ HÀNG</button>
                     </div>
                     <div className="ctsp-spdd-productD">
                         <div className="ctsp-sl-productD">
@@ -50,7 +50,7 @@ class ProductDetails extends Component {
                             <p className="ctsp-congl-productD">Vận Chuyển</p>
                             <p className="ctsp-congr-productD">0 vnd</p>
                         </div>
-                        <div className="ctsp-uudai-productD"><input type="text" placeholder="Nhập mã ưu đãi" /><button>Áp
+                        <div className="ctsp-uudai-productD"><input className="input-proD" type="text" placeholder="Nhập mã ưu đãi" /><button>Áp
           Dụng</button></div>
                     </div>
                     <div className="ctsp-cttien-productD">

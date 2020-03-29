@@ -92,7 +92,7 @@ font-size: 20px;
 
 .menuList:hover {
     background-color: #53382C;
-    /* transition-delay: 0,3s; */
+    transition: all 0.3s linear;
 }
 
 .wrapper {
@@ -111,10 +111,9 @@ font-size: 20px;
     display: none;
     position: absolute;
     background-color: #53382C;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     left: 0;
-    animation-delay: 0,5s;
     margin-top: 10px;
 }
 
@@ -129,6 +128,7 @@ font-size: 20px;
 .scrollMenu {
     display: inline-block;
     width: 100%;
+    transition: all 0.3s linear;
 }
 
 .grid li {
@@ -151,17 +151,22 @@ font-size: 20px;
     padding: 0;
 }
 
+.fa-shopping-cart {
+    font-size: 30px;
+    color: white;
+}
+
 .hover-li ul li {
     display: block !important;
 }
 
 .menuList {
-    padding: 15px;
+    padding: 12px;
 
 }
 .menuList:hover .menuHover {
     display: flex;
-    transition-delay: 1s;
+    transition: all 0.3s linear;
 }
 
 .hover-li ul {

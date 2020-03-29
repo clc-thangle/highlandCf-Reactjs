@@ -5,7 +5,7 @@ class Product extends Component {
     render() {
         return (
             <div>
-                <div className="content">
+                <div className="content-pro">
                     <div className="content-title" style={{ marginLeft: '170px' }}>
                         <h2>CÀ PHÊ ESPRESSO</h2>
                     </div>

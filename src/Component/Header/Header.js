@@ -102,7 +102,7 @@ class Header extends Component {
               </div>
             </li>
             <li className="menuList">
-              <a>TIN TỨC</a>
+              <Link to="/news">TIN TỨC</Link>
               <div className="menuHover">
                 <div className="scrollMenu">
                   <div className="wrapper">
@@ -133,7 +133,7 @@ class Header extends Component {
               </div>
             </li>
             <li className="menuList">
-              <a>TRÁCH NHIỆM CỘNG ĐỒNG</a>
+              <Link to="/responsibility">TRÁCH NHIỆM CỘNG ĐỒNG</Link>
               <div className="menuHover">
                 <div className="scrollMenu">
                   <div className="wrapper">
@@ -170,7 +170,7 @@ class Header extends Component {
               </div>
             </li>
             <li className="menuList">
-              <a>VỀ CHÚNG TÔI</a>
+              <Link to="/about">VỀ CHÚNG TÔI</Link>
               <div className="menuHover">
                 <div className="scrollMenu">
                   <div className="wrapper">
@@ -204,7 +204,10 @@ class Header extends Component {
               </div>
             </li>
             <li className="menuList">
-              <a>LIÊN HỆ</a>
+              <Link to="/contact">LIÊN HỆ</Link>
+            </li>
+            <li className="menuList">
+            <Link to="/cart"><i class="fa fa-shopping-cart" aria-hidden="true"></i></Link>
             </li>
           </ul>
         </div>

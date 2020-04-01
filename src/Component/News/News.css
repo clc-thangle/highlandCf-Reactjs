@@ -99,3 +99,18 @@
 .mainBotImg2-new {
    width: 24%;float: left;
 }
+
+@media only screen and (max-width: 800px) {
+    .row-new {
+        width: 100%;
+        margin-left: 0!important;
+    }
+
+    .col-md-4-new {
+        width: 50%;
+    }
+
+    .new-title {
+        margin-left: 0;
+    }
+}

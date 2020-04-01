@@ -28,7 +28,7 @@ class Responsibility extends Component {
                             <span style={{ marginLeft: '10px' }}>03/06/2020</span>
                         </div>
                     </div>
-                    <div className="col-md-4">
+                    <div className="col-md-4" style={{ marginLeft: "1px" }}>
                         <a><img src="https://www.highlandscoffee.com.vn/vnt_upload/news/05_2018/thumbs/470_crop_IMG_0479.jpg" width="370px" height="247px" />
                         </a>
                         <div className="tend-res">

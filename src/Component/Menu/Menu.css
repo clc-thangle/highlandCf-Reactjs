@@ -16,7 +16,6 @@
 .image4 {
   background-image: url(https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-BANHMI-bg_2.jpg);
   background-size: cover;
-  height: 380px;
 }
 
 .caption {
@@ -137,4 +136,78 @@
   text-decoration: none;
   cursor: pointer;
   border-width: 1px;
+}
+
+@media only screen and (max-width: 800px) {
+  .caption {
+    margin: 0;
+    width: 97%;
+  }
+
+  .tend {
+    margin-top: 60%;
+  }
+
+  .des {
+    width: 100%;
+    height: 175px;
+  }
+
+  .tend-img {
+    margin-top: -125%;
+    margin-left: 23%;
+  }
+
+  .khampha {
+    margin-top: -8%;
+  }
+
+  .tend-img2 {
+    margin-left: 23%;
+    margin-top: -110%;
+  }
+
+  .caption2 {
+    width: 100%;
+    float: right;
+    margin-top: 50%;
+  }
+
+  .des2 {
+    width: 100%;
+    height: 145px;
+  }
+
+  .tend-img3 {
+    margin-top: -110%;
+    margin-left: 23%;
+  }
+
+  .caption3 {
+    width: 100%;
+    float: right;
+    margin-top: 50%;
+  }
+
+  .des3 {
+    width: 100%;
+    height: 145px;
+  }
+
+  .tend-img4 {
+    margin-top: -120%;
+    margin-left: 13%;
+  }
+
+  .caption4 {
+    width: 100%;
+    float: right;
+    margin-top: 50%;
+  }
+
+  .des4 {
+    width: 100%;
+    height: 185px;
+  }
+
 }

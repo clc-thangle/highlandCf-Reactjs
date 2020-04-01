@@ -206,8 +206,12 @@
     }
     .col-25 {
       margin-bottom: 20px;
+      position: relative;
+      display: block;
+      margin-left: 17.8%;
+      width: 33%;
     }
-    .col-75 .container {
-      
+    .col-75 {
+      width: 100%;
     }
   }

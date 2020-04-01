@@ -17,10 +17,9 @@ class Menu extends Component {
                             <a className="khampha" style={{ color: '#faebd7' }}>KHÁM PHÁ THÊM</a>
                         </div>
                     </div>
-                    <img style={{ marginTop: '15px' }} src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-PSD_3.png" />
+                    <img className="tend-img" src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-PSD_3.png" />
                 </div>
                 <div className="image2">
-                    <img style={{ marginTop: '15px', marginLeft: '120px' }} src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-FREEZE_1.png" />
                     <div className="caption2">
                         <div className="tend2">
                             <h3><a style={{ fontSize: '45px', color: '#006400' }}>FREEZE</a></h3>
@@ -32,6 +31,7 @@ class Menu extends Component {
                             <a className="khampha" style={{ color: '#006400' }}>KHÁM PHÁ THÊM</a>
                         </div>
                     </div>
+                    <img className="tend-img2" src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-FREEZE_1.png" />
                 </div>
                 <div className="image3">
                     <div className="caption3">
@@ -45,10 +45,10 @@ class Menu extends Component {
                             <a className="khampha" style={{ color: 'white' }}>KHÁM PHÁ THÊM</a>
                         </div>
                     </div>
-                    <img style={{ marginTop: '15px' }} src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-TEA_1.png" />
+                    <img className="tend-img3" src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-TEA_1.png" />
                 </div>
                 <div className="image4">
-                    <img style={{ marginTop: '15px', marginLeft: '100px' }} src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/banh-mi-thit-nuong-vn.png" width="585px" height="333.45px" />
+                    
                     <div className="caption4">
                         <div className="tend2" data-eff="fadeInUp">
                             <h3><a style={{ fontSize: '45px', color: '#ffffe0' }}>BÁNH MÌ</a></h3>
@@ -60,6 +60,7 @@ class Menu extends Component {
                             <a className="khampha" style={{ color: '#ffffe0' }}>KHÁM PHÁ THÊM</a>
                         </div>
                     </div>
+                    <img className="tend-img4" src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/banh-mi-thit-nuong-vn.png" width="585px" height="333.45px" />
                 </div>
             </div>
             </div>

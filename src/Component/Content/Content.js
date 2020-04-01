@@ -19,11 +19,11 @@ class Content extends Component {
             </div>
           </div>
           <div className="image1-tend">
-            <a className="khampha-tend">KHÁM PHÁ THÊM</a>
+            <a className="khampha">KHÁM PHÁ THÊM</a>
             <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/HCO-7548-PHIN-SUA-DA-2019-TALENT-WEB_1.jpg" width="100%" />
           </div>
           <div className="image2-tend">
-            <a className="khampha2-tend">KHÁM PHÁ THÊM</a>
+            <a className="khampha2">KHÁM PHÁ THÊM</a>
             <img src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/Product_banner_confirmed.jpg" width="100%" />
           </div>
           <div className="image3-tend">
@@ -33,12 +33,12 @@ class Content extends Component {
           <div className="mainBot-tend">
             <div className="gridBot-tend">
               <div className="col-b1-tend">
-                <div className="main1-tend" style={{ marginTop: '-73px' }}>
+                <div className="main1-tend" style={{ marginTop: '-93px' }}>
                   <h1 className="quanmoi-tend">QUÁN MỚI</h1>
                   <ul>
                     <li><h1 style={{ color: 'white' }}>721 HUỲNH TẤN PHÁT</h1></li>
-                    <li style={{ width: '341px', textAlign: 'left', marginBottom: '23px', marginTop: '19px' }}><a>721 Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Tp. Hồ Chí Minh</a></li>
-                    <li style={{ textAlign: 'left' }}><a>Tìm Đường &gt;</a></li>
+                    <li style={{ width: '270px' }}><a>721 Huỳnh Tấn Phát, Phường Phú Thuận, Quận 7, Tp. Hồ Chí Minh</a></li>
+                    <li><a>Tìm Đường &gt;</a></li>
                   </ul>
                 </div>
               </div>
@@ -46,15 +46,25 @@ class Content extends Component {
                 <div className="main2-tend">
                   <div className="newFeed-tend">
                     <ul className="newfeed1-tend">
-                      <li style={{ marginLeft: '60px', float: 'left' }}><h1>TIN MỚI NHẤT</h1></li>
-                      <li style={{ float: 'right', marginTop: '30px', marginRight: '115px' }}><a style={{ color: 'black' }}>Xem toàn bộ &gt;</a></li>
+                      <li style={{ marginLeft: '60px' }}><h1>TIN MỚI NHẤT</h1></li>
+                      <li style={{ float: 'right', marginTop: '30px', marginRight: '18%' }}><a style={{ color: 'black' }}>Xem toàn bộ &gt;</a></li>
                     </ul>
                     <div className="newfeed2-tend">
                       <ul>
                         <li>
+                          <div className="mainBotImg-tend"><img src="https://www.highlandscoffee.com.vn/vnt_upload/news/03_2020/470_crop_Highlands_-_Freeze_Tra_Xanh_-_KV_Phase_1_470x312.png" width="120px" height={68} /></div>
+                          <div className="txtBot-tend">
+                            <a style={{ display: 'block', fontSize: '16px', color: 'black' }}>HIGHLANDS COFFEE - DỊCH VỤ GIAO HÀNG MIỄN PHÍ</a>
+                            <div className="txtCalendar-tend">
+                              <i className="fa fa-calendar-o" aria-hidden="true" />
+                              <span style={{ marginLeft: '10px' }}>03/06/2020</span>
+                            </div>
+                          </div>
+                        </li>
+                        <li>
                           <div className="mainBotImg-tend"><img src="https://www.highlandscoffee.com.vn/vnt_upload/news/12_2019/tra-sen-vang-moi.png" width="120px" height={68} /></div>
                           <div className="txtBot-tend">
-                            <a style={{ display: 'block', fontSize: '16px', color: 'black' }}>UỐNG TRÀ SEN VÀNG MỚI - NHẬN VÔ VÀN ƯU ĐÃI SEN VÀNG</a>
+                            <a style={{ display: 'block', fontSize: '16px', color: 'black' }}> ĐẠI TIỆC ÂM NHẠC: HIGHLANDS COFFEE 20 NĂM - GẮN KẾT NIỀM TỰ HÀO ĐẤT VIỆT</a>
                             <div className="txtCalendar-tend">
                               <i className="fa fa-calendar-o" aria-hidden="true" />
                               <span style={{ marginLeft: '10px' }}>03/06/2020</span>
@@ -62,19 +72,9 @@ class Content extends Component {
                           </div>
                         </li>
                         <li>
-                          <div className="mainBotImg2-tend" style={{ marginTop: '15px' }}><img src="https://www.highlandscoffee.com.vn/vnt_upload/news/10_2019/hco-7598-20-years-concert-web-470x314_1.jpg" width="120px" height={68} /></div>
-                          <div className="txtBot-tend" style={{ textAlign: 'left', display: 'inline-block', float: 'left', width: '60%' }}>
-                            <a style={{ display: 'block', fontSize: '16px', color: 'black', marginTop: '15px' }}>ĐẠI TIỆC ÂM NHẠC: HIGHLANDS COFFEE 20 NĂM - GẮN KẾT NIỀM TỰ HÀO ĐẤT VIỆT</a>
-                            <div className="txtCalendar-tend">
-                              <i className="fa fa-calendar-o" aria-hidden="true" />
-                              <span style={{ marginLeft: '10px' }}>03/06/2020</span>
-                            </div>
-                          </div>
-                        </li>
-                        <li>
-                          <div className="mainBotImg-tend" style={{ marginTop: '15px' }}><img src="https://www.highlandscoffee.com.vn/vnt_upload/news/10_2019/HCO-7598-20-YEARS-NEWS-BANNER-NEWS-470X314.jpg" width="120px" height={68} /></div>
+                          <div className="mainBotImg-tend"><img src="https://www.highlandscoffee.com.vn/vnt_upload/news/10_2019/HCO-7598-20-YEARS-NEWS-BANNER-NEWS-470X314.jpg" width="120px" height={68} /></div>
                           <div className="txtBot-tend">
-                            <a style={{ display: 'block', fontSize: '16px', color: 'black', marginTop: '15px' }}>UỐNG TRÀ SEN VÀNG MỚI - NHẬN VÔ VÀN ƯU ĐÃI SEN VÀNG</a>
+                            <a style={{ display: 'block', fontSize: '16px', color: 'black' }}>UỐNG TRÀ SEN VÀNG MỚI - NHẬN VÔ VÀN ƯU ĐÃI SEN VÀNG</a>
                             <div className="txtCalendar-tend">
                               <i className="fa fa-calendar-o" aria-hidden="true" />
                               <span style={{ marginLeft: '10px' }}>03/06/2020</span>

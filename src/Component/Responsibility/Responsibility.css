@@ -1,6 +1,7 @@
 .row-res {
     width: 80%;
-    margin-left: 11% !important;   
+    overflow: hidden; 
+    margin-left: 11% ;
 }
 
 .new-title-res {
@@ -33,6 +34,22 @@
 
 .tend-res h3 {
     width: 96%;
+}
+
+@media only screen and (max-width: 800px) {
+    .row-res {
+        width: 100%;
+        margin-left: 0!important;
+    }
+
+    .col-md-4 {
+        width: 50%;
+        float: left;
+    }
+
+    .new-title {
+        margin-left: 0;
+    }
 }
 
 

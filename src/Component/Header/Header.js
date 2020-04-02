@@ -5,9 +5,9 @@ class Header extends Component {
   render() {
     return (
       <div className="ncf-header">
-        <div className="logo">
+        <Link to="/" className="logo">
           <img style={{ marginTop: '16px' }} src="https://www.highlandscoffee.com.vn/vnt_upload/weblink/logo.svg" />
-        </div>
+        </Link>
         <div className="headerTool">
           <div className="rowTool">
             <div className="search">
@@ -33,7 +33,7 @@ class Header extends Component {
         <div className="menuTool">
           <ul>
             <li className="menuList">
-              <a>QUÁN CÀ PHÊ</a>
+              <Link to="/">QUÁN CÀ PHÊ</Link>
             </li>
             <li className="menuList">
               <Link to="/menu">THỰC ĐƠN</Link>

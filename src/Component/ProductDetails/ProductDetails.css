@@ -125,3 +125,43 @@
 .ctsp-giohang-productD button:hover {
   opacity: 0.5;
 }   
+
+@media (max-width: 800px) {
+  .content-title-productD {
+    margin-left: 0!important;
+  }
+  .content-productD p {
+    width: 100%!important;
+    margin-left: 0!important;
+  }
+  .tend-productD {
+    width: 165%;
+  }
+  .main-content-productD {
+    margin-left: 0;
+  }
+  .ctsp-giohang-productD {
+    margin: -18px 0 0 0;
+    width: 50%;
+    padding-bottom: 10%!important;
+    border: none;
+  }
+  .menu-img-productD {
+    margin-right: 0;
+    margin-left: 4%;
+  }
+  .ctsp-dathang-productD {
+    border: none;
+  }
+  .ctsp-cttien-productD {
+    visibility: hidden;
+    height: 0;
+    padding: 0;
+  }
+  .content-cate-productD {
+    margin-bottom: -5%;
+  }
+  .tend-productD {
+    visibility: hidden;
+  }
+}

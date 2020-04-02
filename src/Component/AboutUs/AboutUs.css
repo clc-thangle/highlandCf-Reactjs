@@ -184,3 +184,49 @@
     transition: all 0.3s linear;
 }
 
+@media (max-width: 800px) {
+
+    .img-about1 {
+        width: 100%;
+    }
+    .background1-about {
+        background-size: cover;
+        background-image: url("https://www.highlandscoffee.com.vn/vnt_upload/about/ABOUT-ORIGIN.png");
+    }
+    .cap-about1 {
+        width: 100%;
+        float: right;
+    }
+    .cap-about {
+        margin: 30px 30px;
+    }
+    .img-about2 {
+        width: 100%;
+    }
+    .background2-about {
+        background-size: cover;
+        background-image: url("https://www.highlandscoffee.com.vn/vnt_upload/about/About_Customer_service_2.jpg");
+    }
+    .cap-about2 {
+        width: 100%;
+    }
+    .cap2-about {
+        margin: 30px 30px;
+        text-align: left;
+    }
+    .img-about3 {
+        width: 100%;
+    }
+    .background3-about {
+        background-size: cover;
+        background-image: url("https://www.highlandscoffee.com.vn/vnt_upload/about/ABOUT-CAREER3.jpg");
+    }
+    .main-cate {
+        width: 100%;
+        margin-left: -21%;
+    }
+
+}
+
+
+ 

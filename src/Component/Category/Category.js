@@ -5,7 +5,7 @@ class Category extends Component {
         return (
             <div>
                 <div className="content-cate">
-                    <div className="content-title-cate" style={{ marginLeft: '170px' }}>
+                    <div className="content-title-cate">
                         <h2>CÀ PHÊ PHIN</h2>
                     </div>
                     <div className="content-cate">
@@ -51,7 +51,7 @@ class Category extends Component {
                     </div>
                 </div>
                 <div className="content-cate">
-                    <div className="content-title-cate" style={{ marginLeft: '170px' }}>
+                    <div className="content-title-cate">
                         <h2>Cà Phê Espresso</h2>
                     </div>
                     <div className="content-cate">
@@ -120,7 +120,7 @@ class Category extends Component {
                                 <span>Hương vị tự nhiên, thơm ngon của Trà Việt với phong cách hiện đại tại Highlands Coffee sẽ giúp bạn gợi mở vị giác của bản thân và tận hưởng một cảm...</span>
                             </div>
                         </div>
-                        <div className="col-md-4-cate rowpadding">
+                        <div className="col-md-4-cate rowpadding cate3-row">
                             <a><img className="img-orther" src="https://www.highlandscoffee.com.vn/vnt_upload/product/06_2018/menu-OTHERS-3.jpg" width="350px" height="247px" />
                             </a>
                             <div className="tend-cate">

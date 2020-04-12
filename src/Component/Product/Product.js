@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import "./Product.css";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import ShowProduct from './ShowProduct/ShowProduct';
+import ShowProductMore from './ShowProductMore/ShowProductMore';
 class Product extends Component {
     render() {
         return (
@@ -14,30 +16,9 @@ class Product extends Component {
                         <div className="main">
                             <div className="main-content">
                                 <div className="row">
-                                    <div className="col-md-4 rowpadding sp">
-                                        <Link to="/product-details" className="menu-img"><img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_LATTE.png" width="188px" height="188px" />
-                                        </Link>
-                                        <div className="tend-pro">
-                                            <h3><a>CÀ PHÊ</a></h3>
-                                            <h3>Giá: 15.000Đ</h3>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 rowpadding sp">
-                                        <Link to="/product-details" className="menu-img"><img src="https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/thumbs/270_crop_MOCHA.png" width="188px" height="188px" />
-                                        </Link>
-                                        <div className="tend-pro">
-                                            <h3><a>TRÀ</a></h3>
-                                            <h3>Giá: 15.000Đ</h3>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 rowpadding banh">
-                                        <Link to="/product-details" className="menu-img"><img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_AMERICANO.png" width="188px" height="188px" />
-                                        </Link>
-                                        <div className="tend-pro">
-                                            <h3><a>BÁNH</a></h3>
-                                            <h3>Giá: 15.000Đ</h3>
-                                        </div>
-                                    </div>
+                                    <ShowProduct img="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_LATTE.png" namePro="CÀ PHÊ" price="Gía: 15.000"></ShowProduct>
+                                    <ShowProduct img="https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/thumbs/270_crop_MOCHA.png" namePro="TRÀ" price="Gía: 15.000"></ShowProduct>
+                                    <ShowProduct img="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_AMERICANO.png" namePro="BÁNH" price="Gía: 15.000"></ShowProduct>
                                 </div>
                             </div>
                         </div>
@@ -52,30 +33,9 @@ class Product extends Component {
                         <div className="main">
                             <div className="main-content">
                                 <div className="row">
-                                    <div className="col-md-4 rowpadding sp">
-                                        <Link to="/product-details" className="menu-img"><img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_AMERICANO.png" width="188px" height="188px" />
-                                        </Link>
-                                        <div className="tend-pro">
-                                            <h3><a>PHIN ĐEN NÓNG</a></h3>
-                                            <h3>Giá: 15.000Đ</h3>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 rowpadding sp">
-                                        <Link to="/product-details" className="menu-img"><img src="https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/thumbs/270_crop_CFD.png" width="188px" height="188px" />
-                                        </Link>
-                                        <div className="tend-pro">
-                                            <h3><a>PHIM ĐEN ĐÁ</a></h3>
-                                            <h3>Giá: 15.000Đ</h3>
-                                        </div>
-                                    </div>
-                                    <div className="col-md-4 rowpadding banh">
-                                        <Link to="/product-details" className="menu-img"><img src="https://www.highlandscoffee.com.vn/vnt_upload/product/06_2018/thumbs/270_crop_PHIN-SUA-NONG.png" width="188px" height="188px" />
-                                        </Link>
-                                        <div className="tend">
-                                            <h3><a>PHIN SỮA NÓNG</a></h3>
-                                            <h3>Giá: 15.000Đ</h3>
-                                        </div>
-                                    </div>
+                                    <ShowProductMore imgMore="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_AMERICANO.png" nameProMore="PHIN ĐEN NÓNG" price="GIÁ: 15.000"></ShowProductMore>
+                                    <ShowProductMore imgMore="https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/thumbs/270_crop_CFD.png" nameProMore="PHIN ĐEN ĐÁ" price="GIÁ: 15.000"></ShowProductMore>
+                                    <ShowProductMore imgMore="https://www.highlandscoffee.com.vn/vnt_upload/product/06_2018/thumbs/270_crop_PHIN-SUA-NONG.png" nameProMore="PHIN SỮA NÓNG" price="GIÁ: 15.000"></ShowProductMore>
                                 </div>
                             </div>
                         </div>

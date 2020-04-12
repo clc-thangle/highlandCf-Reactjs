@@ -52,17 +52,17 @@ class Header extends Component {
                   <ul>
                     <li className="hover-li">
                       <div className="m-cate">
-                        <Link to="/product" href="#" className="hover-li-item">CÀ PHÊ</Link>
+                        <Link to="/category" href="#" className="hover-li-item">CÀ PHÊ</Link>
                         <a className="menuxt2"><i className="fa fa-angle-right" aria-hidden="true" />
                           <i className="fa fa-angle-down" aria-hidden="true" /></a></div>
                       <ul className="menuxt2-show">
-                        <li><a>Cà Phê Phin</a></li>
+                        <li><Link to="product">Cà Phê Phin</Link></li>
                         <li><a>Cà Phê Espresso</a></li>
                       </ul>
                     </li>
                     <li className="hover-li">
                       <div className="m-cate">
-                        <Link to="/cate" href="#" className="hover-li-item">FREEZE</Link>
+                        <Link to="/category" href="#" className="hover-li-item">FREEZE</Link>
                         <a className="menuxt2"><i className="fa fa-angle-right" aria-hidden="true" />
                           <i className="fa fa-angle-down" aria-hidden="true" /></a></div>
                       <ul className="menuxt2-show">

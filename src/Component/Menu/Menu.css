@@ -24,6 +24,7 @@
   margin: 20px 0px 0px 170px;
 }
 
+
 .caption2 {
   width: 50%;
   float: right;
@@ -44,6 +45,10 @@
 
 .tend {
   height: 78px;
+}
+
+.tend a {
+  font-size: 45px;
 }
 
 .tend2 {
@@ -116,10 +121,6 @@
 .image4 a {
   text-decoration: none;
   cursor: pointer;
-}
-
-.image4 {
-  padding-bottom: 3%;
 }
 
 .khampha:hover {

@@ -1,8 +1,73 @@
 import React, { Component } from 'react';
 import './Menu.css'
+import dl from './../../menu.json'
 import MenuItem from './MenuItem';
 class Menu extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: [],
+            catePro : [
+                {
+                  cate_id : 'ca_phe',
+                  cate_name: 'Cà phê',
+                  products : []
+                },
+                {
+                  cate_id : 'tra',
+                  cate_name : 'Trà',
+                  products : []
+                },
+                {
+                  cate_id : 'thuc_uong_da_xay',
+                  cate_name : 'Thức uống đá xay',
+        
+                  products : []
+                },
+                {
+                  cate_id : 'thuc_uong_trai_cay',
+                  cate_name : 'Thức uống trái cây',
+                  products : []
+                },
+                {
+                  cate_id : 'banh_snack',
+                  cate_name : 'Bánh snack',
+                  products : []
+                },
+                {
+                  cate_id : 'mon_noi_bat',
+                  cate_name : 'Món nổi bật',
+                  products : []
+                }
+              ]
+        }
+    }
+
+    componentDidMount() {
+        this.setState({
+            data: dl.data
+        });
+        var proCates = this.state.catePro;
+        this.state.catePro.map((value,key) => {
+            let products = [];
+            dl.data.map((val,key) => {
+                if(val.product_category_id === value.categ_id)
+                {
+                    products.push(val);
+                }
+            })
+            console.log(products);
+            proCates[key].products= products;
+            
+        })
+        console.log("aaaa");    
+    }
+
     render() {
+
+        console.log(dl);
+
         return (
             <div>
             <div className="menu-content">
@@ -50,21 +115,6 @@ class Menu extends Component {
                 color = 'white'
                 namButton = 'KHÁM PHÁ THÊM'
                 />
-                {/* <div className="image4">
-                    
-                    <div className="caption4">
-                        <div className="tend2" data-eff="fadeInUp">
-                            <h3><a style={{ fontSize: '45px', color: '#ffffe0' }}>BÁNH MÌ</a></h3>
-                        </div>
-                        <div className="des4" data-eff="fadeInUp">
-                            <span style={{ color: '#ffffe0' }}>Bạn đã quá quen thuộc với Bánh mì Việt Nam. Hãy nếm thử một miếng Bánh mì ngon, giòn, nóng hổi tại Highlands Coffee. Một kết hợp hoàn hảo giữa lớp nhân chua, cay, mặn, ngọt quyện với lớp vỏ bánh mì giòn tan, mịn màng tạo ra tầng tầng lớp lớp dư vị cho thực khách. </span>
-                        </div>
-                        <div className="link" data-eff="fadeInUp">
-                            <a className="khampha" style={{ color: '#ffffe0' }}>KHÁM PHÁ THÊM</a>
-                        </div>
-                    </div>
-                    <img className="tend-img4" src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/banh-mi-thit-nuong-vn.png" width="585px" height="333.45px" />
-                </div> */}
             </div>
             </div>
         );

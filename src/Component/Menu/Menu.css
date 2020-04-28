@@ -21,14 +21,14 @@
 .caption {
   width: 50%;
   float: left;
-  margin: 20px 0px 0px 170px;
+  margin: 65px 0px 0px 170px;
 }
 
 
 .caption2 {
   width: 50%;
   float: right;
-  margin: 55px 0px 0px 170px;
+  margin: 65px 0px 0px 170px;
 }
 
 .caption3 {
@@ -106,11 +106,13 @@
 .image1 a {
   text-decoration: none;
   cursor: pointer;
+  margin-top: 3%;
 }
 
 .image2 a {
   text-decoration: none;
   cursor: pointer;
+  margin-top: 3%;
 }
 
 .image3 a {
@@ -164,7 +166,6 @@
 
   .tend-img {
     margin-top: -125%;
-    margin-left: 23%;
   }
 
   .khampha {

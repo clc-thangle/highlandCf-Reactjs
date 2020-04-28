@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
-
+import db from './../../menu.json';
 class MenuItem extends Component {
+
+    constructor(props) {
+        super(props);
+        this.setState = {
+            arrayCate: []
+        }
+    }
+
+
     render() {
         return (
                 <div className={this.props.ctClassImg}>

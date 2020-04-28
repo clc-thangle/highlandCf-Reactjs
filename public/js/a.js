@@ -41,9 +41,9 @@ window.onload = function () {
       })
     })
   
-    const lis = document.querySelectorAll('.hover-li');
+    var lis = document.querySelectorAll('.hover-li');
     lis.forEach(item => {
-      console.log(item);
+      //console.log(item);
       item.getElementsByClassName('menuxt2')[0].addEventListener('click', e => {
         console.log(item.getElementsByClassName('menuxt2')[0]);
         const submenu = item.getElementsByClassName('menuxt2-show')[0];

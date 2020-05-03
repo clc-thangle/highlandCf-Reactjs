@@ -8,16 +8,25 @@
     margin-bottom: 20px;
 }
 
-.menu-img {
+hr {
+    margin-left: 11%;
+    margin-right: 20%;
+}
+
+/* .menu-img {
     margin-left: 20px;
     margin-right: 20px;
     border: solid 1px rgb(243, 189, 122);
     padding: 100px 60px 100px 60px;
     width: 20.333333% !important;
-}
+} */
+
+/* .slick-slide {
+    width: 300px !important;
+} */
 
 .rowpadding {
-    width: 25.333333% !important;
+    width: 75.333333% !important;
 }
 
 .col-md-4 a {
@@ -43,7 +52,8 @@
 }
 
 .main-content {
-    margin-left: 143px;
+    margin-left: 10.5%;
+    margin-right: 21.5%;
 }
 
 .content-title {

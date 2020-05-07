@@ -74,6 +74,7 @@ class Product extends Component {
                                         return(
                                             <ShowProduct
                                             key={key}
+                                            id={value.cate_id}
                                             img={value.image}
                                             price={value.price}
                                             namePro={value.product_name}

@@ -7,7 +7,7 @@
 }
 
 .des-cate {
-    width: 120%;
+    width: 130%;
 }
 
 .main-cate {
@@ -37,6 +37,7 @@
 
 .img-sidebar-cate {
     float: left;
+    margin-right: 3%;
 }
 
 .tend-cate a{
@@ -60,6 +61,10 @@
     border-radius: 5px; 
     text-decoration: none;
     margin-top: 10px;
+}
+
+.tend-cate {
+    width: 110%;
 }
 
 .main-link-cate a:hover {
@@ -92,9 +97,8 @@
 .col-md-4-cate {
     margin-left: 20px;
     margin-right: 20px;
-    border: solid 1px rgb(243, 189, 122);
     padding: 15px 15px 15px 5px;
-    width: 29.333333% !important;
+    width: 80.333333% !important;
 }
 
 .col-md-4-cate a {
@@ -138,6 +142,7 @@
     }
     .item-sidebar-cate {
         margin-left: 4%;
+        margin-top: 10%;
     }
     .row-cate {
         width: 100%;

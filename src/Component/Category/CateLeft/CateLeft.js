@@ -6,11 +6,11 @@ class CateLeft extends Component {
             <div className="main-cate">
                 <div className="main-content-cate">
                     <div className="main-img-cate">
-                        <a><img src={this.props.img} width="770px" height="290px" /></a>
+                        <a><img src={this.props.img}/></a>
                     </div>
                     <p>{this.props.title}</p>
                     <div className="main-link-cate">
-                        <a><span>{this.props.span}</span></a>
+                        <a><span>XEM SẢN PHẨM</span></a>
                     </div>
                 </div>
             </div>

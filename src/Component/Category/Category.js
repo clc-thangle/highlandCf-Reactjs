@@ -3,8 +3,80 @@ import "./Category.css"
 import CateLeft from './CateLeft/CateLeft';
 import CateRight from './CateRight/CateRight';
 import MoreCate from './MoreCate/MoreCate';
+import info from './../../menu.json';
+import Slider from 'react-slick';
 class Category extends Component {
+
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: [],
+            catePro: [
+                {
+                    cate_id: 'ca_phe',
+                    cate_name: 'Cà phê',
+                    products: []
+                }
+                , 
+                {
+                    cate_id: 'tra',
+                    cate_name: 'Trà',
+                    products: []
+                },
+                  {
+                    cate_id : 'thuc_uong_da_xay',
+                    cate_name : 'Thức uống đá xay',
+                    products : []
+                  },
+                  {
+                    cate_id : 'thuc_uong_trai_cay',
+                    cate_name : 'Thức uống trái cây',
+                    products : []
+                  },
+                  {
+                    cate_id : 'banh_snack',
+                    cate_name : 'Bánh snack',
+                    products : []
+                  },
+                  {
+                    cate_id : 'mon_noi_bat',
+                    cate_name : 'Món nổi bật',
+                    products : []
+                  }
+            ]
+        }
+    }
+
+    componentDidMount() {
+        this.setState({
+            data: info.data
+        })
+        var showCate = this.state.catePro;
+        this.state.catePro.map((value, key) => {
+            let products = [];
+            info.data.map((val, key) => {
+                if (val.product_category_id == value.cate_id) {
+                    products.push(val);
+                }
+            })
+            showCate[key].products = products;
+        })
+        this.setState({
+            catePro: showCate
+        })
+        // console.log(this.state.catePro);
+    }
     render() {
+
+        var settings = {
+            dots: true,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 3,
+            slidesToScroll: 3
+          };
+
+        console.log(this.state.catePro);
         return (
             <div>
                 <div className="content-cate">
@@ -12,16 +84,26 @@ class Category extends Component {
                         <h2>CÀ PHÊ PHIN</h2>
                     </div>
                     <div className="content-cate">
-                        <CateLeft img="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-PSD-inside.jpg"
-                        title="Việt Nam tự hào sở hữu một di sản văn hóa cà phê giàu có, và 'Phin' chính là linh hồn, là nét văn hóa thưởng thức cà phê đã ăn sâu vào tiềm thức biết bao người Việt. Cà phê rang xay được chiết xuất chậm rãi từng giọt một thông qua dụng cụ lọc bằng kim loại có tên là 'Phin', cũng giống như thể hiện sự sâu sắc trong từng suy nghĩ và chân thành trong những mối quan hệ hiện hữu. Bạn có thể tùy thích lựa chọn uống nóng hoặc dùng chung với đá, có hoặc không có sữa đặc. Highlands Coffee tự hào phục vụ cà phê Việt theo cách truyền thống của người Việt."
-                        span="XEM SẢN PHẨM"></CateLeft>
+                        {
+                            <CateLeft
+                                id={this.state.catePro[0].cate_id}
+                                img={this.state.catePro[0].products[0] ? this.state.catePro[0].products[0].image : null}
+                                title={this.state.catePro[0].products[0] ? this.state.catePro[0].products[0].description : null}
+                            />
+                        }
                         <div className="sidebar-cate">
-                            <CateRight img="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_PHIN-SUA-DA.png"
-                            nameCateSide="Phin Sữa Đá"
-                            title="Hương vị cà phê Việt Nam đích thực! Từng hạt cà phê hảo hạng được chọn bằng tay, phối trộn độc đáo giữa hạt Robusta từ cao nguyên Việt Nam,..."></CateRight>
-                            <CateRight img="https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/thumbs/270_crop_CFD.png"
-                            nameCateSide="Phin Đen Đá"
-                            title="Dành cho những tín đồ cà phê đích thực! Hương vị cà phê truyền thống được phối trộn độc đáo tại Highlands. Cà phê đậm đà pha hoàn toàn từ Phin,..."></CateRight>
+                            <CateRight
+                                id={this.state.catePro[0].cate_id}
+                                img={this.state.catePro[0].products[1] ? this.state.catePro[0].products[1].image : null}
+                                title={this.state.catePro[0].products[1] ? this.state.catePro[0].products[1].description : null}
+                                nameCateSide={this.state.catePro[0].products[1] ? this.state.catePro[0].products[1].product_name : null}
+                            />
+                            <CateRight
+                                id={this.state.catePro[0].cate_id}
+                                img={this.state.catePro[0].products[2] ? this.state.catePro[0].products[2].image : null}
+                                title={this.state.catePro[0].products[2] ? this.state.catePro[0].products[2].description : null}
+                                nameCateSide={this.state.catePro[0].products[2] ? this.state.catePro[0].products[2].product_name : null}
+                            />
                         </div>
                     </div>
                 </div>
@@ -30,31 +112,43 @@ class Category extends Component {
                         <h2>Cà Phê Espresso</h2>
                     </div>
                     <div className="content-cate">
-                        <CateLeft img="https://www.highlandscoffee.com.vn/vnt_upload/product/05_2018/menu-ESPRESSO-inside-2VN.jpg"
-                        title="Hãy quên đi những bộn bề cuộc sống để tìm thấy những niềm vui nho nhỏ từ ly Cà phê Espresso của Highlands Coffee. Bí quyết để cho ra hương vị đậm đà, tinh tế của một tách cà phê Espresso là phương pháp phối trộn độc đáo, công phu giữa hai loại cà phê Arabica và Robusta thượng hạng, và đặc biệt là không thể thiếu được kĩ năng pha chế điêu luyện từ các Barista của chúng tôi."
-                        span="XEM SẢN PHẨM"></CateLeft>
+                        <CateLeft
+                            id={this.state.catePro[0].cate_id}
+                            img={this.state.catePro[0].products[3] ? this.state.catePro[0].products[3].image : null}
+                            title={this.state.catePro[0].products[3] ? this.state.catePro[0].products[3].description : null}
+                        />
                         <div className="sidebar-cate">
-                            <CateRight img="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_LATTE.png"
-                            nameCateSide="Latte"
-                            title="Ly cà phê sữa ngọt ngào đến khó quên! Với một chút nhẹ nhàng hơn so với Cappuccino, Latte của chúng tôi bắt đầu với cà phê espresso, sau đó thêm sữa tươi và..."></CateRight>
-                            <CateRight img="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_CAPPUCINO.png"
-                            nameCateSide="Latte"
-                            title="Ly cà phê sữa đậm đà thời thượng! Một chút đậm đà hơn so với Latte, Cappuccino của chúng tôi bắt đầu với cà phê espresso, sau đó thêm một lượng tương đương giữa..."></CateRight>
+                            <CateRight
+                                id={this.state.catePro[0].cate_id}
+                                img={this.state.catePro[0].products[4] ? this.state.catePro[0].products[4].image : null}
+                                title={this.state.catePro[0].products[4] ? this.state.catePro[0].products[4].description : null}
+                                nameCateSide={this.state.catePro[0].products[4] ? this.state.catePro[0].products[4].product_name : null}
+                            />
+                            <CateRight
+                                id={this.state.catePro[0].cate_id}
+                                img={this.state.catePro[0].products[6] ? this.state.catePro[0].products[6].image : null}
+                                title={this.state.catePro[0].products[6] ? this.state.catePro[0].products[6].description : null}
+                                nameCateSide={this.state.catePro[0].products[6] ? this.state.catePro[0].products[6].product_name : null}
+                            />
                         </div>
                     </div>
                 </div>
                 <div className="new-content-cate">
                     <div className="content-title-cate"><h2>KHÁC</h2></div>
                     <div className="row-cate">
-                        <MoreCate img="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-PSD_3.png"
-                        nameMore="CÀ PHÊ"
-                        title="Sự kết hợp hoàn hảo giữa hạt cà phê Robusta; Arabica thượng hạng được trồng trên những vùng cao nguyên Việt Nam màu mỡ, qua những bí quyết rang..."></MoreCate>
-                        <MoreCate img="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-TEA_1.png"
-                        nameMore="TRÀ"
-                        title="Hương vị tự nhiên, thơm ngon của Trà Việt với phong cách hiện đại tại Highlands Coffee sẽ giúp bạn gợi mở vị giác của bản thân và tận hưởng một cảm..."></MoreCate>
-                        <MoreCate img="https://www.highlandscoffee.com.vn/vnt_upload/product/06_2018/menu-OTHERS-3.jpg"
-                        nameMore="BÁNH"
-                        title="Sẽ càng ngon miệng hơn khi bạn kết hợp đồ uống với những chiếc bánh ngọt thơm ngon được làm thủ công hàng ngày ngay tại bếp bánh của Highlands..."></MoreCate>
+                        <Slider {...settings}>
+                        {this.state.catePro.map((value,key) => {
+                            return(
+                                <MoreCate
+                                key={key}
+                                id={value.cate_id}
+                                img={value.products[0] ? value.products[0].image : null}
+                                nameMore={value.cate_name}
+                                title={value.products[0] ? value.products[0].description : null}
+                                />
+                            )
+                        })}
+                        </Slider>
                     </div>
                 </div>
             </div>

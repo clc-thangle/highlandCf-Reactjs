@@ -128,17 +128,15 @@ font-size: 20px;
     display: none;
     position: absolute;
     background-color: #53382C;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
     left: 0;
-    animation-delay: 0,5s;
-    margin-top: 10px;
+    animation: menuHover ease-in 0.2s;
 }
 
 .menuxt2 {
     display: none;
 }
-
 
 .btnX {
     padding: 8px;
@@ -165,7 +163,16 @@ font-size: 20px;
 
 .grid li {
     display: inline-block;
-    margin-left: -10px;
+    width: 102%;
+}
+
+@keyframes menuHover{
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .hover-li {
@@ -214,7 +221,6 @@ font-size: 20px;
     width: 190px;
     margin-bottom: 19px;
 }
-
 
 .slider {
     position: absolute;
@@ -341,6 +347,7 @@ li.hover-li{
     .headerTool {
         margin-right: 3%;
     }
+
     .menuTool {
         text-align: center;
         display: none;

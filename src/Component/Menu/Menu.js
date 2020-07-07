@@ -3,231 +3,165 @@ import './Menu.css';
 import info from './../../menu.json';
 import MenuItem from './MenuItem';
 import { db } from '../../firebaseConnect';
+import {data} from '../../data-clean/firebase/data.json';
+
+var _ = require('lodash');
+
 class Menu extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            data: [],
-            catePro: [
-                {
-                    cate_id: 'ca_phe',
-                    cate_name: 'Cà phê',
-                    products: []
-                },
-                {
-                    cate_id: 'tra',
-                    cate_name: 'Trà',
-                    products: []
-                },
-                {
-                    cate_id: 'thuc_uong_da_xay',
-                    cate_name: 'Thức uống đá xay',
-                    products: []
-                },
-                {
-                    cate_id: 'thuc_uong_trai_cay',
-                    cate_name: 'Thức uống trái cây',
-                    products: []
-                },
-                {
-                    cate_id: 'banh_snack',
-                    cate_name: 'Bánh snack',
-                    products: []
-                },
-                {
-                    cate_id: 'mon_noi_bat',
-                    cate_name: 'Món nổi bật',
-                    products: []
-                }
-            ],
-            arrayProduct: []
+            arrayCategory : []
         }
     }
 
     componentDidMount() {
-        this.setState({
-            data: info.data
-        });
-        var proCates = this.state.catePro;
-        // console.log(proCates);
+        var list = [];
+        db.collection("data").get()
+            .then((querySnapshot) => {
+                querySnapshot.forEach((doc) => {
+                    list.push(doc.data());
+                    this.setState({
+                        arrayCategory: list
+                    })
+                });
+            });
 
-        this.state.catePro.map((value, key) => {
-            let products = [];  // \lấy ra cái list products mà có cate= ...
-            info.data.map((val, key) => {
-                if (val.product_category_id === value.cate_id) {
-                    products.push(val);
-                }
 
-            })
-            // console.log(products);
-            
-            proCates[key].products = products; // \push cái list product vô cái mảng chứa đối tượng của cate\
+        //----------get all product---------------------------------------
+        // var list = [];
 
-        })
-        this.setState({
-            catePro: proCates
-        });
-        console.log(this.state.catePro);
+        // var query = db.collection('data');
+        // query.get().then((querySnapshot) => {
+        //     querySnapshot.forEach((document) => {
+        //         document.ref.collection('dishes').get().then((querySnapshot) => {
 
-        // var array = [];
-        // db.collection("data").get().then((querysnapshot) => {
-        //     querysnapshot.forEach(function (doc) {
-        //         array.push(doc.data())
-        //     })
+        //             querySnapshot.forEach(function (doc) {
+        //                 list.push(doc.data());
+        //             })
+
+        //             this.setState({
+        //                 arrayProduct: list
+        //             })
+
+        //         });
+        //     });
         // });
-        // this.setState(
-        //     {arrayProduct: array}
-        // );
+        //-----------------------------------------------------------------------
+
+
+        //------push data into firebase firestore------------------------------
+        // console.log(data);
+
+
+        // var arr = _.values(data);
+
+        // console.log(arr);
+
+        // arr.map((value, key) => {
+            // db.collection('data').doc(String(value.dish_type_id)).set({
+            //     dish_type_id: String(value.dish_type_id),
+            //     dish_type_name: String(value.dish_type_name)
+            // }, { merge: true })
+
+        //    value.dishes.map((values, keys) => {
+        //        db.collection('data').doc(String(value.dish_type_id)).collection('dishes')
+        //          .doc(String(values.id)).set(values, { merge: true })
+        //    })
+
+        // })
+        //-------------------------------------------------------------------
+
     }
 
-    // getCategoryName = (a) => {
-    //     if (a.indexOf("5d71dc67ad2aba2980db0a9d") !== -1) {
-    //         //category_name = "Thức ăn nhẹ";
-    //         return a = "Mít Sấy";
-    //     }
-    //     //thức ăn nhẹ : điều vàng, đậu phộng
-    //     if (a.indexOf("5d71dc6ead2aba2980db0b04") !== -1) {
-    //         // category_name = "Thức ăn nhẹ";
-    //         return a = "Thức ăn nhẹ";
-    //     }
-
-    //     //cà phê gói: cà phê anrica, cà phê phin
-    //     if (a.indexOf("5d71dc6dad2aba2980db0af0") !== -1) {
-    //         //category_name = "Cà Phê Gói";
-    //         return a = "Cà Phê Gói";
-    //     }
-
-    //     //macchiato: trà đen machiato, matcha-macchiato, Trà Xoài Macchiato - Đá, Trà Lài Macchiato - Lạnh, Trà Cherry Macchiato
-    //     if (a.indexOf("5d71dc6dad2aba2980db0af2") !== -1) {
-    //         //category_name = "Thức Uống Macchiato";
-    //         return a = "Thức Uống Macchiato";
-    //     }
-
-    //     //đá xay : phuc-bon-tu-cam-da-xay, Cà Phê Đá Xay-Lạnh, Cam Vàng Chanh Đá Xay, Trà Cà Phê Đá Xay - Lạnh, chanh-sa-da-xay
-    //     if (a.indexOf("5d71dc71ad2aba2980db0b3e") !== -1) {
-    //         //category_name = "Thức Uống Đá Xay";
-    //         return a = "Trái Cây Đá Xay";
-    //     }
-    //     //đá xay : cookie-da-xay, dao-viet-quat-da-xay, chocolate-da-xay, oi-hong-viet-quat-da-xay, matcha-da-xay
-    //     if (a.indexOf("5d71dc6fad2aba2980db0b21") !== -1) {
-    //         //category_name = "Thức Uống Đá Xay";
-    //         return a = "Thức Uống Đá Xay";
-    //     }
-
-    //     //sinh tố: sinh-to-cam-xoai, sinh-to-viet-quat
-    //     if (a.indexOf("5d71dc6fad2aba2980db0b22") !== -1) {
-    //         //category_name = "Sinh tố";
-    //         return a = "Sinh tố";
-    //     }
-    //     //cà phê : ca-phe-den-nong, ca-phe-den-da, ca-phe-sua-nong, bac-xiu-nong, ca-phe-sua-da, Bạc Xỉu
-    //     if (a.indexOf("5d71dc6dad2aba2980db0af8") !== -1) {
-    //         // category_name = "Cà Phê";
-    //         return a = "Cà Phê";
-    //     }
-    //     //cà phê : cappucino-nong, cappuchino-da, caramel-macchiato-nong, latte-nong, 
-    //     //mocha-nong, mocha-da, espresso-da, espresso-nong, caramel-macchiato-da, latte-da, americano-nong, americano-da
-    //     if (a.indexOf("5d71dc6fad2aba2980db0b24") !== -1) {
-    //         //category_name = "Cà Phê";
-    //         return a = "Cà Phê Rang Xay";
-    //     }
-    //     //socola-da, tra-matcha-latte-nong, tra-matcha-latte-da
-    //     if (a.indexOf("5d71dc71ad2aba2980db0b3d") !== -1) {
-    //         //category_name = "Choco Matcha";
-    //         return a = "Choco Matcha";
-    //     }
-    //     //ô lông
-    //     if (a.indexOf("5d71dc6fad2aba2980db0b27") !== -1) {
-    //         // category_name = "Oo Loong";
-    //         return a = "Oo Loong";
-    //     }
-    //     //cold-brew
-    //     if (a.indexOf("5d71dc6ead2aba2980db0b0e") !== -1) {
-    //         // category_name = "Thức uống Cold Brew";
-    //         return a = "Thức uống Cold Brew";
-    //     }
-
-    //     if (a.indexOf("5e819b462d2d6a24a216c8d2") !== -1) {
-    //         // category_name = "Gói Subscription";
-    //         return a = "Gói Subscription 3 ngày";
-    //     }
-
-    //     if (a.indexOf("5e819b5548916b75fd17e172") !== -1) {
-    //         /// category_name = "Gói Subscription";
-    //         return a = "Gói Subscription 5 ngày";
-    //     }
-
-    //     if (a.indexOf("5e819b69538a2402ff619802") !== -1) {
-    //         //category_name = "Gói Subscription";
-    //         return a = "Gói Subscription 7 ngày";
-    //     }
-
-    //     //trà trái cây: trà xoài nóng
-    //     if (a.indexOf("5d71dc70ad2aba2980db0b35") !== -1) {
-    //         //category_name = "Trà Trái Cây";
-    //         return a = "Trà Trái Cây";
-    //     }
-    // }
-
-    // pushData = () => {
-
-    //     this.state.arrayProduct.map(value => {
-    //         // db.collection("categories").doc(value.product_category_id).collection("products").doc(value._id).set(value, { merge: true });
-
-    //         db.collection("categories").doc(value.product_category_id).set({
-    //             category_name: this.getCategoryName(value.product_category_id),
-    //             description: value.description,
-    //             image: value.image,
-    //             category_id: value.product_category_id,
-                
-    //         }, { merge: true })
-    //     })
-
-    // }
-
     render() {
-
-        console.log(this.state.arrayProduct);
-
-        // this.pushData()
-        
+        console.log(this.state.arrayCategory);
         return (
+            // <div>
+            //     <div className="menu-content">
+            //         {this.state.arrayCategory.map((value, key) => {
+            //             if (key % 2 == 0) {
+            //                 return (
+            //                     <MenuItem
+            //                         key={key}
+            //                         id={value.id}
+            //                         anh={value.data[0] ? value.data[0].image : null}
+            //                         ctClassImg='image1'
+            //                         content={value.products[0] ? value.products[0].description : null}
+            //                         title={value.cate_name}
+            //                         namButton='KHÁM PHÁ THÊM'
+            //                         color='white'
+            //                         ctClassTend='tend-img'
+            //                         ctClass='caption'
+            //                     />
+            //                 )
+            //             }
+            //             else {
+            //                 return (
+            //                     <MenuItem
+            //                         key={key}
+            //                         id={value.cate_id}
+            //                         anh={value.products[0] ? value.products[0].image : null}
+            //                         ctClassImg='image2'
+            //                         content={value.products[0] ? value.products[0].description : null}
+            //                         title={value.cate_name}
+            //                         namButton='KHÁM PHÁ THÊM'
+            //                         ctClassTend='tend-img2'
+            //                         ctClass='caption2'
+            //                     />
+            //                 )
+            //             }
+            //         })}
+            //     </div>
+            // </div>
             <div>
-                <div className="menu-content">
-                    {this.state.catePro.map((value, key) => {
-                        if (key % 2 == 0) {
-                            return (
-                                <MenuItem
-                                    key={key}
-                                    id={value.cate_id}
-                                    anh={value.products[0] ? value.products[0].image : null}
-                                    ctClassImg='image1'
-                                    content={value.products[0] ? value.products[0].description : null}
-                                    title={value.cate_name}
-                                    namButton='KHÁM PHÁ THÊM'
-                                    color='white'
-                                    ctClassTend='tend-img'
-                                    ctClass='caption'
-                                />
-                            )
-                        }
-                        else {
-                            return (
-                                <MenuItem
-                                    key={key}
-                                    id={value.cate_id}
-                                    anh={value.products[0] ? value.products[0].image : null}
-                                    ctClassImg='image2'
-                                    content={value.products[0] ? value.products[0].description : null}
-                                    title={value.cate_name}
-                                    namButton='KHÁM PHÁ THÊM'
-                                    ctClassTend='tend-img2'
-                                    ctClass='caption2'
-                                />
-                            )
-                        }
-                    })}
-                </div>
+            <div className="menu-content">
+                <MenuItem
+                ctClassImg = 'image1'
+                ctClass = 'caption'
+                ctClassTend = 'tend-img'
+                title = 'CÀ PHÊ'
+                des ='des'
+                content = 'Sự kết hợp hoàn hảo giữa hạt cà phê Robusta; Arabica thượng hạng được trồng trên những vùng cao nguyên Việt Nam màu mỡ, qua những bí quyết rang xay độc đáo, Highlands Coffee chúng tôi tự hào giới thiệu những dòng sản phẩm Cà phê mang hương vị đậm đà và tinh tế.'
+                anh = 'https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-PSD_3.png'
+                color = '#faebd7'
+                namButton = 'KHÁM PHÁ THÊM'
+                />
+                <MenuItem
+                ctClassImg = 'image2'
+                ctClass = 'caption2'
+                ctClassTend = 'tend-img2'
+                title = 'FREEZE'
+                des ='des2'
+                content = 'Sảng khoái với thức uống đá xay phong cách Việt. Freeze là thức uống đá xay mát lạnh được pha chế từ những nguyên liệu thuần túy của Việt Nam.'
+                anh = 'https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-FREEZE_1.png'
+                color = '#006400'
+                namButton = 'KHÁM PHÁ THÊM'
+                />
+                <MenuItem
+                ctClassImg = 'image3'
+                ctClass = 'caption3'
+                ctClassTend = 'tend-img3'
+                title = 'TRÀ'
+                des ='des3'
+                content = 'Hương vị tự nhiên, thơm ngon của Trà Việt với phong cách hiện đại tại Highlands Coffee sẽ giúp bạn gợi mở vị giác của bản thân và tận hưởng một cảm giác thật khoan khoái, tươi mới.'
+                anh = 'https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/menu-TEA_1.png'
+                color = 'white'
+                namButton = 'KHÁM PHÁ THÊM'
+                />
+                <MenuItem
+                ctClassImg = 'image4'
+                ctClass = 'caption4'
+                ctClassTend = 'tend-img4'
+                title = 'BÁNH MÌ'
+                des ='des4'
+                content = 'Bạn đã quá quen thuộc với Bánh mì Việt Nam. Hãy nếm thử một miếng Bánh mì ngon, giòn, nóng hổi tại Highlands Coffee. Một kết hợp hoàn hảo giữa lớp nhân chua, cay, mặn, ngọt quyện với lớp vỏ bánh mì giòn tan, mịn màng tạo ra tầng tầng lớp lớp dư vị cho thực khách. '
+                anh = 'https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/banh-mi-thit-nuong-vn.png'
+                color = 'white'
+                namButton = 'KHÁM PHÁ THÊM'
+                />
+            </div>
             </div>
         );
     }

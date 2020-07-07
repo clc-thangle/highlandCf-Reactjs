@@ -11,6 +11,7 @@ import AboutUs from '../AboutUs/AboutUs';
 import News from '../News/News';
 import Contact from '../Contact/Contact';
 import Home from '../Home';
+import Shop from '../Shop/Shop';
 class DieuHuongURL extends Component {
     render() {
         return (
@@ -27,6 +28,7 @@ class DieuHuongURL extends Component {
                     <Route exact path="/about" component={AboutUs}/>
                     <Route exact path="/news" component={News}/>
                     <Route exact path="/contact" component={Contact}/>
+                    <Route exact path="/shop" component={Shop}/>
                     </Switch>
                 </div>
         );

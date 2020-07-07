@@ -40,7 +40,7 @@
 .caption4 {
   width: 44%;
   float: right;
-  margin: 30px 0px 0px 0px;
+  margin: 80px 0px 0px 0px;
 }
 
 .tend {
@@ -64,8 +64,8 @@
 }
 
 .des {
-  height: 175px;
-  width: 67%;
+  height: 180px;
+  width: 76%;
 }
 
 .des2 {
@@ -106,13 +106,12 @@
 .image1 a {
   text-decoration: none;
   cursor: pointer;
-  margin-top: 3%;
+  margin-top: -3%;
 }
 
 .image2 a {
   text-decoration: none;
   cursor: pointer;
-  margin-top: 3%;
 }
 
 .image3 a {

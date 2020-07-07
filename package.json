@@ -5,6 +5,7 @@
   "dependencies": {
     "firebase": "^6.6.2",
     "firestore-export-import": "^0.5.0",
+    "lodash": "^4.17.15",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router-dom": "^5.0.1",
@@ -31,5 +32,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "config.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/clc-thangle/highlandCf-Reactjs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/clc-thangle/highlandCf-Reactjs/issues"
+  },
+  "homepage": "https://github.com/clc-thangle/highlandCf-Reactjs#readme"
 }

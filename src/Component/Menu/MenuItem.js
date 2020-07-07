@@ -1,15 +1,6 @@
 import React, { Component } from 'react';
-import db from './../../menu.json';
+import {Link} from 'react-router-dom';
 class MenuItem extends Component {
-
-    constructor(props) {
-        super(props);
-        this.setState = {
-            arrayCate: []
-        }
-    }
-
-
     render() {
         return (
                 <div className={this.props.ctClassImg}>
@@ -21,7 +12,7 @@ class MenuItem extends Component {
                         <span style={{color :this.props.color}}>{this.props.content}</span>
                     </div>
                     <div className="link">
-                        <a className="khampha" style={{color :this.props.color}}>{this.props.namButton}</a>
+                        <Link to="/shop" className="khampha" style={{color :this.props.color}}>{this.props.namButton}</Link>
                     </div>
                 </div>
                 <img className={this.props.ctClassTend} src={this.props.anh} />
